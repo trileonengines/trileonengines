@@ -1,8 +1,6 @@
-from fastapi import APIRouter
-from app.core.engine import run_engine
-
-router = APIRouter()
-
-@router.post("/run")
-def run(payload: dict):
-    return run_engine(payload)
+def run_engine(input_data):
+    return {
+        "status": "success",
+        "input": input_data,
+        "message": "Trileon is running"
+    }
